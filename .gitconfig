@@ -1,0 +1,16 @@
+[init]
+	defaultBranch = main
+[user]
+	name = Derek Harnett
+	email = derek.harnett@shaw.ca
+[alias]
+	l = log
+	lo = log --oneline
+	a = add
+	s = status
+	cm = commit -m
+	cam = commit --amend -m
+	b = branch
+	sw = switch
+	m = merge
+	bd = branch -d
