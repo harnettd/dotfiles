@@ -57,12 +57,18 @@ if [ $HOSTNAME = orcus ]; then
     alias nczvn="netcat -z -v -n 192.168.50.119 1716"
 
     # pacman
-    alias pms="sudo pacman -S"  # sync
-    alias pmsc="sudo pacman -Sc"  # sync and clean cache
-    alias pmss="pacman -Ss"  # sync and search
-    alias pmsu="sudo pacman -Syu"  # sync and upgrade
+    alias pms="sudo pacman -S"  # install from sync database
+    alias pmsu="sudo pacman -Syu"  # upgrade
+    alias pmss="pacman -Ss"  # search sync database
+    alias pmsi="pacman -Sii"  # display info on sync package
     alias pmq="pacman -Q"  # query
-    alias pmr="sudo pacman -R"  # remove
+    alias pmqs="pacman -Qs"  # search local package database
+    alias pmqi="pacman -Qii"  # display info on a local package
+    alias pmqqe="pacman -Qqe > ~/pkglist.txt"  # list to file all explicitly installed packages
+    alias pmr="sudo pacman -R"  # remove package(s)
+
+    # Backup the local package database.
+    alias backup-pkg-db="tar cjf ~/pacman_database.tar.bz2 /var/lib/pacman/local"
 fi
 
 
