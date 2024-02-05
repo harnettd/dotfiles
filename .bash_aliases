@@ -47,6 +47,7 @@ alias nadp="grep '^(D)' ~/Documents/GTD/next_actions_personal.txt"
 if [ $HOSTNAME = makemake ]; then
     # apt
     alias aptuu="sudo apt update && sudo apt upgrade"
+    alias apti="sudo apt install"
     alias apta="sudo apt autoremove"
 fi
 
