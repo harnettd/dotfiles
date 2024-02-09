@@ -1,0 +1,26 @@
+#!/bin/sh
+
+# Backup ~/Books folder to the portable hard drive.
+#
+# Usage:
+#   backup-Books
+
+# source directory
+SRC=~/Books/
+
+# target directory
+DEST=/mnt/seagate-portable-hd/Books
+
+# Exit if $SRC does not exist.
+if ! [ -d $SRC ]; then
+    echo backup-Books: source directory $SRC does not exist
+    exit 1
+fi
+
+# Exit if $DEST does not exist
+if ! [ -d $DEST ]; then
+    echo backup-Books: target directory $DEST does not exist
+    exit 1
+fi
+
+rsync -au --delete $SRC $DEST
