@@ -70,6 +70,10 @@ if [ $HOSTNAME = orcus ]; then
 
     # Backup the local package database.
     alias backup-pkg-db="tar cjf ~/pacman_database.tar.bz2 /var/lib/pacman/local"
+
+    # Mount and unmount the portable hard drive.
+    alias mount-hd="sudo mount /dev/sda1 /mnt/seagate-portable-hd"
+    alias umount-hd="sudo umount /mnt/seagate-portable-hd"
 fi
 
 
